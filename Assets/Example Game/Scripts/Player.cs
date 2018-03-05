@@ -35,7 +35,7 @@ public class Player : MonoBehaviour
         //Find out if we are colliding with the ground
         LayerMask groundlayer = LayerMask.GetMask("Ground");
 
-        bool touchingGround = collider.IsTouchingLayers(groundLayer);
+        bool touchingGround = collider.IsTouchingLayers(groundlayer);
 
         
         //Debug.Log(horizontal);

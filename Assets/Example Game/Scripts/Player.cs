@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Player : MonoBehaviour
@@ -45,6 +45,15 @@ public class Player : MonoBehaviour
 
         // Set the x component of the velocity based on input
         velocity.x = horizontal*speed;
+        
+        // Determine the speed for the animator
+        float animatorSpeed = Mathf.Abs (velocity.x);
+
+        // Get the animator compoinent from our game object
+        Animator animatorComponent = GetComponent<Animator>();
+
+        animatorComponent.SetFloat("Speed", animatorSpeed); 
+        
 
         // Set y component of the velocity based on jump
         if (jump == true && touchingGround == true)

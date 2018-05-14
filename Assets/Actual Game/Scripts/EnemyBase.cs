@@ -22,7 +22,7 @@ public class EnemyBase : MonoBehaviour {
 		Riley mario = collision.collider.GetComponent<Riley>();
 		if (mario != null)
 		{
-			mario.ApplyDamage(damage);
+		//	mario.ApplyDamage(damage); 
 		}
 
 	}

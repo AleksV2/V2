@@ -55,7 +55,19 @@ public class Riley : MonoBehaviour
         // Set rigidbody velocity based on local copy
         rigidbody.velocity = velocity;
 
+        Animator myAnimator = GetComponent<Animator>();
+        myAnimator.SetFloat("speed", Mathf.Abs(velocity.x));
 
+        GetComponent<SpriteRenderer>();
+
+        SpriteRenderer mySpriteRenderer = GetComponent<SpriteRenderer>();
+        if (velocity.x < 0) {
+            mySpriteRenderer.flipX = true;
+            }
+        if (velocity.x > 0)
+        {
+            mySpriteRenderer.flipX = false;
+        }
 
         //Print a log when a mouse button is pressed
         if (Input.GetMouseButton(0))

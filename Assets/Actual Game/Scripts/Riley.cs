@@ -56,7 +56,7 @@ public class Riley : MonoBehaviour
         rigidbody.velocity = velocity;
 
         Animator myAnimator = GetComponent<Animator>();
-        myAnimator.SetFloat("speed", Mathf.Abs(velocity.x));
+        myAnimator.SetFloat("Speed", Mathf.Abs(velocity.x));
 
         GetComponent<SpriteRenderer>();
 
